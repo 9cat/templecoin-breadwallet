@@ -684,7 +684,7 @@ fromConnection:(AVCaptureConnection *)connection
             [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(resetQRGuide) object:nil];
             self.scanController.cameraGuide.image = [UIImage imageNamed:@"cameraguide-red"];
 
-            if ([s hasPrefix:@"bitcoin:"] || [request.paymentAddress hasPrefix:@"1"]) {
+            if ([s hasPrefix:@"templecoin:"] || [request.paymentAddress hasPrefix:@"1"]) {
                 self.scanController.message.text = [NSString stringWithFormat:@"%@\n%@",
                                                     NSLocalizedString(@"not a valid bitcoin address", nil),
                                                     request.paymentAddress];

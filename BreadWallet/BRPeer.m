@@ -48,7 +48,7 @@
 #endif
 #define LOCAL_HOST         0x7f000001
 #define ZERO_HASH          @"0000000000000000000000000000000000000000000000000000000000000000".hexToData
-#define CONNECT_TIMEOUT    3.0
+#define CONNECT_TIMEOUT    30.0
 
 typedef enum {
     error = 0,
@@ -270,7 +270,10 @@ services:(uint64_t)services
         NSLog(@"%@:%d sending %@", self.host, self.port, type);
 
         [self.outputBuffer appendMessage:message type:type];
+             NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
         
+        NSLog(@"outputContent=%@ self.outputBuffer.length=%d   [self.outputStream hasSpaceAvailable]= %hhd",outputContent, self.outputBuffer.length, [self.outputStream hasSpaceAvailable]);
+
         while (self.outputBuffer.length > 0 && [self.outputStream hasSpaceAvailable]) {
             NSInteger l = [self.outputStream write:self.outputBuffer.bytes maxLength:self.outputBuffer.length];
 
@@ -952,10 +955,16 @@ services:(uint64_t)services
             if (aStream != self.outputStream) return;
         
             while (self.outputBuffer.length > 0 && [self.outputStream hasSpaceAvailable]) {
+                
+                
+                     NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
+
+                     NSLog(@"outputContent=%@   l=%d",outputContent,[self.outputBuffer length]);
                 NSInteger l = [self.outputStream write:self.outputBuffer.bytes maxLength:self.outputBuffer.length];
                 
+               
                 if (l > 0) [self.outputBuffer replaceBytesInRange:NSMakeRange(0, l) withBytes:NULL length:0];
-                //if(self.outputBuffer.length == 0) NSLog(@"%@:%d output buffer cleared", self.host, self.port);
+                if(self.outputBuffer.length == 0) NSLog(@"%@:%d output buffer cleared", self.host, self.port);
             }
 
             break;
@@ -980,16 +989,17 @@ services:(uint64_t)services
                     }
                     
                     self.msgHeader.length = headerLen + l;
-                    
+                    NSLog(@"init- self.msgHeader.length = %d",self.msgHeader.length );
                     // consume one byte at a time, up to the magic number that starts a new message header
                     while (self.msgHeader.length >= sizeof(uint32_t) &&
                            [self.msgHeader UInt32AtOffset:0] != BITCOIN_MAGIC_NUMBER) {
-#if DEBUG
+//#if DEBUG
                         printf("%c", *(const char *)self.msgHeader.bytes);
-#endif
+//#endif
                         [self.msgHeader replaceBytesInRange:NSMakeRange(0, 1) withBytes:NULL length:0];
                     }
                     
+                    NSLog(@"self.msgHeader.length = %d",self.msgHeader.length );
                     if (self.msgHeader.length < HEADER_LENGTH) continue; // wait for more stream input
                 }
                 
