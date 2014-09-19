@@ -270,8 +270,9 @@ services:(uint64_t)services
         NSLog(@"%@:%d sending %@", self.host, self.port, type);
 
         [self.outputBuffer appendMessage:message type:type];
-             NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
         
+        
+        NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
         NSLog(@"outputContent=%@ self.outputBuffer.length=%d   [self.outputStream hasSpaceAvailable]= %hhd",outputContent, self.outputBuffer.length, [self.outputStream hasSpaceAvailable]);
 
         while (self.outputBuffer.length > 0 && [self.outputStream hasSpaceAvailable]) {

@@ -79,14 +79,13 @@ static const char *dns_seeds[] = {
 #define GENESIS_BLOCK [[BRMerkleBlock alloc] initWithBlockHash:GENESIS_BLOCK_HASH version:1\
     prevBlock:@"0000000000000000000000000000000000000000000000000000000000000000".hexToData\
     merkleRoot:@"deceb268776c85c006c65804eb53e55960a85aaf75e366a5c7b0bf961b6defec".hexToData\
-    timestamp:1395705600.0 - NSTimeIntervalSince1970 target:0x1d00ffffu nonce:24706485u totalTransactions:1\
-    hashes:@"c741436d354a9fb337fbd79e4b2750732571f00e8b78d04493f9e9283cf4ad0b".hexToData flags:@"00".hexToData height:0]
+    timestamp:1395705600.0 - NSTimeIntervalSince1970 target:0x1e0ffff0u nonce:24706485u totalTransactions:1\
+    hashes:@"deceb268776c85c006c65804eb53e55960a85aaf75e366a5c7b0bf961b6defec".hexToData flags:@"00".hexToData height:0]
 
 // blockchain checkpoints, these are also used as starting points for partial chain downloads, so they need to be at
 // difficulty transition boundaries in order to verify the block difficulty at the immediately following transition
 static const struct { uint32_t height; char *hash; time_t timestamp; uint32_t target; } checkpoint_array[] = {
-    {  0, "0xc741436d354a9fb337fbd79e4b2750732571f00e8b78d04493f9e9283cf4ad0b", 1395705600, 0x1d00ffffu },
-   
+    {  80000, "0x9b1085cd568ca6de626b5b6db7b6c0c4d34076d20e623ec1b1883a24a619ac84", 1409637825, 0x1e03bd4au },
 };
 
 static const char *dns_seeds[] = {
