@@ -69,7 +69,7 @@ static const struct { uint32_t height; char *hash; time_t timestamp; uint32_t ta
 };
 
 static const char *dns_seeds[] = {
-    "testnet-seed.bitcoin.petertodd.org", "testnet-seed.bluematt.me", "testnet-seed.alexykot.me"
+  //  "testnet-seed.bitcoin.petertodd.org", "testnet-seed.bluematt.me", "testnet-seed.alexykot.me"
 };
 
 #else // main net
@@ -85,12 +85,11 @@ static const char *dns_seeds[] = {
 // blockchain checkpoints, these are also used as starting points for partial chain downloads, so they need to be at
 // difficulty transition boundaries in order to verify the block difficulty at the immediately following transition
 static const struct { uint32_t height; char *hash; time_t timestamp; uint32_t target; } checkpoint_array[] = {
-    {  80000, "0x9b1085cd568ca6de626b5b6db7b6c0c4d34076d20e623ec1b1883a24a619ac84", 1409637825, 0x1e03bd4au },
+    
 };
 
 static const char *dns_seeds[] = {
-    "dnsseed.templecoin.com", "t.9mmo.com"
-};
+    "seed.templecoin.org"};
 
 #endif
 
@@ -976,7 +975,7 @@ static const char *dns_seeds[] = {
             if (b) [self.blocks removeObjectForKey:b.blockHash];
         }
     }
-
+/*
     // verify block difficulty
     if (! [block verifyDifficultyFromPreviousBlock:prev andTransitionTime:transitionTime]) {
         NSLog(@"%@:%d relayed block with invalid difficulty target %x, blockHash: %@", peer.host, peer.port,
@@ -992,7 +991,7 @@ static const char *dns_seeds[] = {
         [self peerMisbehavin:peer];
         return;
     }
-
+*/
     if ([block.prevBlock isEqual:self.lastBlock.blockHash]) { // new block extends main chain
         if ((block.height % 500) == 0 || block.txHashes.count > 0 || block.height > peer.lastblock) {
             NSLog(@"adding block at height: %d, false positive rate: %f", block.height, self.filterFpRate);
