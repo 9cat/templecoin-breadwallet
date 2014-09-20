@@ -408,7 +408,7 @@ sequence:(uint32_t)sequence
 
 - (uint64_t)standardFee
 {
-    return ((self.size + 999)/1000)*TX_FEE_PER_KB;
+    return 100000+((self.size + 999)/1000)*TX_FEE_PER_KB;
 }
 
 - (NSUInteger)hash

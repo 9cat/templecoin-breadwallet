@@ -41,8 +41,8 @@
 #define FIXED_PEERS          @"FixedPeers"
 #define MAX_CONNECTIONS      3
 #define NODE_NETWORK         1  // services value indicating a node offers full blocks, not just headers
-#define PROTOCOL_TIMEOUT     30.0
-#define MAX_CONNECT_FAILURES 20 // notify user of network problems after this many connect failures in a row
+#define PROTOCOL_TIMEOUT     3.0
+#define MAX_CONNECT_FAILURES 99 // notify user of network problems after this many connect failures in a row
 
 #if BITCOIN_TESTNET
 
@@ -213,6 +213,9 @@ static const char *dns_seeds[] = {
                     [_peers addObject:[[BRPeer alloc] initWithAddress:addr port:BITCOIN_STANDARD_PORT
                                        timestamp:now - 24*60*60*(3 + drand48()*4) services:NODE_NETWORK]];
                 }
+                
+                
+                
             }
 
 #if BITCOIN_TESTNET
@@ -442,12 +445,13 @@ static const char *dns_seeds[] = {
 
     _lastBlock = nil;
 
+    /*
     // start the chain download from the most recent checkpoint that's at least a week older than earliestKeyTime
     for (int i = sizeof(checkpoint_array)/sizeof(*checkpoint_array) - 1; ! _lastBlock && i >= 0; i--) {
         if (checkpoint_array[i].timestamp + 7*24*60*60 - NSTimeIntervalSince1970 >= self.earliestKeyTime) continue;
         self.lastBlock = self.blocks[[NSString stringWithUTF8String:checkpoint_array[i].hash].hexToData.reverse];
     }
-
+*/
     if (! _lastBlock) _lastBlock = self.blocks[GENESIS_BLOCK_HASH];
 
     if (self.downloadPeer) { // disconnect the current download peer so a new random one will be selected
@@ -490,10 +494,30 @@ static const char *dns_seeds[] = {
         [self performSelector:@selector(txTimeout:) withObject:transaction.txHash afterDelay:PROTOCOL_TIMEOUT];
 
         for (BRPeer *p in peers) {
+            NSLog(@"peer ip = %@", [self getIP:p.address]);
             [p sendInvMessageWithTxHash:transaction.txHash];
         }
     });
 }
+
+- (NSString *)getIP:(unsigned int)ip
+{
+    //unsigned int ip = //however you get the IP as unsigned int
+    unsigned int part1, part2, part3, part4;
+    
+    part1 = ip/16777216;
+    ip = ip%16777216;
+    part2 = ip/65536;
+    ip = ip%65536;
+    part3 = ip/256;
+    ip = ip%256;
+    part4 = ip;
+    
+    NSString *fullIP = [NSString stringWithFormat:@"%d.%d.%d.%d", part1, part2, part3, part4];
+    
+    return fullIP;
+}
+
 
 // number of connected peers that have relayed the transaction
 - (NSUInteger)relayCountForTransaction:(NSData *)txHash

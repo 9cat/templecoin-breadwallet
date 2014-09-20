@@ -793,7 +793,7 @@
     [w registerTransaction:tx];
 
     XCTAssertEqual(w.balance, SATOSHIS/2, @"[BRWallet balance]");
-
+/*
 #if ! BITCOIN_TESTNET
     w = [[BRWallet alloc] initWithContext:nil andSeed:^NSData *{ return [NSData data]; }];
     
@@ -858,8 +858,14 @@
 
     XCTAssertEqual([w feeForTransaction:tx], tx.standardFee, @"[BRWallet transactionFor:to:withFee:]");
 #endif
+ */
+ 
+ 
 }
 
+    
+    
+    
 #pragma mark - testBloomFilter
 
 - (void)testBloomFilter
