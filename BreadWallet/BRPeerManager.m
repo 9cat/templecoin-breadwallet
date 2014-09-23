@@ -89,7 +89,11 @@ static const struct { uint32_t height; char *hash; time_t timestamp; uint32_t ta
 };
 
 static const char *dns_seeds[] = {
-    "seed.templecoin.org"};
+
+    "seed.templecoin.org","seed.templecoin.com"};
+
+
+
 
 #endif
 
@@ -107,7 +111,7 @@ static const char *dns_seeds[] = {
 @property (nonatomic, strong) NSMutableDictionary *publishedTx, *publishedCallback;
 @property (nonatomic, strong) BRMerkleBlock *lastBlock, *lastOrphan;
 @property (nonatomic, strong) dispatch_queue_t q;
-@property (nonatomic, strong) id resignActiveObserver, seedObserver;
+@property (nonatomic, strong) id backgroundObserver, seedObserver;
 
 @end
 
@@ -147,8 +151,8 @@ static const char *dns_seeds[] = {
         self.publishedTx[tx.txHash] = tx; // add unconfirmed tx to mempool
     }
 
-    self.resignActiveObserver =
-        [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil
+    self.backgroundObserver =
+        [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil
         queue:nil usingBlock:^(NSNotification *note) {
             [self savePeers];
             [self saveBlocks];
@@ -181,7 +185,7 @@ static const char *dns_seeds[] = {
 - (void)dealloc
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
-    if (self.resignActiveObserver) [[NSNotificationCenter defaultCenter] removeObserver:self.resignActiveObserver];
+    if (self.backgroundObserver) [[NSNotificationCenter defaultCenter] removeObserver:self.backgroundObserver];
     if (self.seedObserver) [[NSNotificationCenter defaultCenter] removeObserver:self.seedObserver];
 }
 
@@ -502,7 +506,7 @@ static const char *dns_seeds[] = {
     NSMutableSet *peers = [NSMutableSet setWithSet:self.connectedPeers];
 
     // instead of publishing to all peers, leave out the download peer to see if the tx propogates and gets relayed back
-    // TODO: XXXX connect to a random peer with an empty or fake bloom filter just for publishing
+    // TODO: XXX connect to a random peer with an empty or fake bloom filter just for publishing
     if (self.peerCount > 1) [peers removeObject:self.downloadPeer];
 
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -651,13 +655,14 @@ static const char *dns_seeds[] = {
 }
 
 // unconfirmed transactions that aren't in the mempools of any of connected peers have likely dropped off the network
+// TODO: XXXX make sure this is getting called, and if it's for a transaction we sent, recommend a rescan
 - (void)removeUnrelayedTransactions
 {
-    BRWallet *w = [[BRWalletManager sharedInstance] wallet];
+    BRWalletManager *m = [BRWalletManager sharedInstance];
 
-    for (BRTransaction *tx in w.recentTransactions) {
+    for (BRTransaction *tx in m.wallet.recentTransactions) {
         if (tx.blockHeight != TX_UNCONFIRMED) break;
-        if ([self.txRelays[tx.txHash] count] == 0) [w removeTransaction:tx.txHash];
+        if ([self.txRelays[tx.txHash] count] == 0) [m.wallet removeTransaction:tx.txHash];
     }
 }
 
@@ -755,7 +760,7 @@ static const char *dns_seeds[] = {
     }
 
     // select the peer with the lowest ping time to download the chain from if we're behind
-    // BUG: XXXX a malicious peer can report a higher lastblock to make us select them as the download peer, if two
+    // BUG: XXX a malicious peer can report a higher lastblock to make us select them as the download peer, if two
     // peers agree on lastblock, use one of them instead
     for (BRPeer *p in self.connectedPeers) {
         if ((p.pingTime < peer.pingTime && p.lastblock >= peer.lastblock) || p.lastblock > peer.lastblock) peer = p;
@@ -774,6 +779,9 @@ static const char *dns_seeds[] = {
 
     _bloomFilter = nil; // make sure the bloom filter is updated with any newly generated addresses
     [peer sendFilterloadMessage:self.bloomFilter.data];
+
+    [self.orphans removeAllObjects]; // clear out orphans there were received on the old filter
+    self.lastOrphan = nil;
 
     if (self.taskId == UIBackgroundTaskInvalid) { // start a background task for the chain sync
         self.taskId = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{}];
@@ -923,6 +931,9 @@ static const char *dns_seeds[] = {
                 }
             }
             else [self.downloadPeer sendFilterloadMessage:self.bloomFilter.data];
+
+            [self.orphans removeAllObjects]; // clear out orphans that were received on the old filter
+            self.lastOrphan = nil;
 
             // after adding addresses to the filter, re-request upcoming blocks that were requested using the old filter
             [self.downloadPeer rereqeustBlocksFrom:self.lastBlock.blockHash];

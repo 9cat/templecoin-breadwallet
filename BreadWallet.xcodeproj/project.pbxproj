@@ -493,9 +493,6 @@
 		7579FF1119231E7700CA56F4 /* p12_utl.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB6419231E7600CA56F4 /* p12_utl.c */; };
 		7579FF1219231E7700CA56F4 /* pk12err.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB6519231E7600CA56F4 /* pk12err.c */; };
 		7579FF1419231E7700CA56F4 /* bio_pk7.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB6919231E7600CA56F4 /* bio_pk7.c */; };
-		7579FF1519231E7700CA56F4 /* dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB6A19231E7600CA56F4 /* dec.c */; };
-		7579FF1619231E7700CA56F4 /* enc.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB6D19231E7600CA56F4 /* enc.c */; };
-		7579FF1719231E7700CA56F4 /* example.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB6F19231E7600CA56F4 /* example.c */; };
 		7579FF1919231E7700CA56F4 /* pk7_asn1.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB7B19231E7600CA56F4 /* pk7_asn1.c */; };
 		7579FF1A19231E7700CA56F4 /* pk7_attr.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB7C19231E7600CA56F4 /* pk7_attr.c */; };
 		7579FF1B19231E7700CA56F4 /* pk7_dgst.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB7D19231E7600CA56F4 /* pk7_dgst.c */; };
@@ -504,8 +501,6 @@
 		7579FF1F19231E7700CA56F4 /* pk7_mime.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB8119231E7600CA56F4 /* pk7_mime.c */; };
 		7579FF2019231E7700CA56F4 /* pk7_smime.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB8219231E7600CA56F4 /* pk7_smime.c */; };
 		7579FF2119231E7700CA56F4 /* pkcs7err.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB8419231E7600CA56F4 /* pkcs7err.c */; };
-		7579FF2219231E7700CA56F4 /* sign.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB8619231E7600CA56F4 /* sign.c */; };
-		7579FF2319231E7700CA56F4 /* verify.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB9719231E7600CA56F4 /* verify.c */; };
 		7579FF2419231E7700CA56F4 /* ppccap.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB9819231E7600CA56F4 /* ppccap.c */; };
 		7579FF2719231E7700CA56F4 /* pqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FB9E19231E7700CA56F4 /* pqueue.c */; };
 		7579FF2919231E7700CA56F4 /* md_rand.c in Sources */ = {isa = PBXBuildFile; fileRef = 7579FBA319231E7700CA56F4 /* md_rand.c */; };
@@ -656,7 +651,6 @@
 		75A1E4D4193869C500D85BEE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75A1E4D6193869C500D85BEE /* Localizable.strings */; };
 		75AA5F55194143D5003F23BD /* BRBouncyBurgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 75AA5F54194143D5003F23BD /* BRBouncyBurgerButton.m */; };
 		75B8346719233B550010931E /* dsa_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = 75B8346619233B550010931E /* dsa_gen.c */; };
-		75B8346819233D400010931E /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7579F7D919231A5D00CA56F4 /* libcrypto.a */; };
 		75D5F3C2191EC270004AB296 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D5F3C1191EC270004AB296 /* Foundation.framework */; };
 		75D5F3C4191EC270004AB296 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D5F3C3191EC270004AB296 /* CoreGraphics.framework */; };
 		75D5F3C6191EC270004AB296 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D5F3C5191EC270004AB296 /* UIKit.framework */; };
@@ -665,12 +659,8 @@
 		75D5F3D2191EC270004AB296 /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D5F3D1191EC270004AB296 /* BRAppDelegate.m */; };
 		75D5F3DE191EC270004AB296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D5F3DC191EC270004AB296 /* Main.storyboard */; };
 		75D5F3E0191EC270004AB296 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D5F3DF191EC270004AB296 /* Images.xcassets */; };
-		75D5F3E7191EC270004AB296 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D5F3E6191EC270004AB296 /* XCTest.framework */; };
-		75D5F3E8191EC270004AB296 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D5F3C1191EC270004AB296 /* Foundation.framework */; };
-		75D5F3E9191EC270004AB296 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D5F3C5191EC270004AB296 /* UIKit.framework */; };
-		75D5F3F1191EC270004AB296 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75D5F3EF191EC270004AB296 /* InfoPlist.strings */; };
-		75D5F3F3191EC270004AB296 /* BreadWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D5F3F2191EC270004AB296 /* BreadWalletTests.m */; };
 		84F68C8A1975E9E2002FC300 /* BRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F68C891975E9E2002FC300 /* BRScanViewController.m */; };
+		9C346BF919D20E4F00E4B94F /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7579F7D919231A5D00CA56F4 /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -680,13 +670,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7579F7D819231A5D00CA56F4;
 			remoteInfo = crypto;
-		};
-		75D5F3EA191EC270004AB296 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75D5F3B6191EC270004AB296 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 75D5F3BD191EC270004AB296;
-			remoteInfo = BreadWallet;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1300,10 +1283,6 @@
 		7579FB6519231E7600CA56F4 /* pk12err.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pk12err.c; sourceTree = "<group>"; };
 		7579FB6619231E7600CA56F4 /* pkcs12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
 		7579FB6919231E7600CA56F4 /* bio_pk7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bio_pk7.c; sourceTree = "<group>"; };
-		7579FB6A19231E7600CA56F4 /* dec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dec.c; sourceTree = "<group>"; };
-		7579FB6D19231E7600CA56F4 /* enc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = enc.c; sourceTree = "<group>"; };
-		7579FB6F19231E7600CA56F4 /* example.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = example.c; sourceTree = "<group>"; };
-		7579FB7019231E7600CA56F4 /* example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = example.h; sourceTree = "<group>"; };
 		7579FB7B19231E7600CA56F4 /* pk7_asn1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pk7_asn1.c; sourceTree = "<group>"; };
 		7579FB7C19231E7600CA56F4 /* pk7_attr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pk7_attr.c; sourceTree = "<group>"; };
 		7579FB7D19231E7600CA56F4 /* pk7_dgst.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pk7_dgst.c; sourceTree = "<group>"; };
@@ -1313,8 +1292,6 @@
 		7579FB8219231E7600CA56F4 /* pk7_smime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pk7_smime.c; sourceTree = "<group>"; };
 		7579FB8319231E7600CA56F4 /* pkcs7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
 		7579FB8419231E7600CA56F4 /* pkcs7err.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pkcs7err.c; sourceTree = "<group>"; };
-		7579FB8619231E7600CA56F4 /* sign.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sign.c; sourceTree = "<group>"; };
-		7579FB9719231E7600CA56F4 /* verify.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = verify.c; sourceTree = "<group>"; };
 		7579FB9819231E7600CA56F4 /* ppccap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ppccap.c; sourceTree = "<group>"; };
 		7579FB9E19231E7700CA56F4 /* pqueue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pqueue.c; sourceTree = "<group>"; };
 		7579FB9F19231E7700CA56F4 /* pqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
@@ -1525,7 +1502,6 @@
 		75D5F3D1191EC270004AB296 /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
 		75D5F3DD191EC270004AB296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75D5F3DF191EC270004AB296 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		75D5F3E5191EC270004AB296 /* BreadWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreadWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D5F3E6191EC270004AB296 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		75D5F3EE191EC270004AB296 /* BreadWalletTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BreadWalletTests-Info.plist"; sourceTree = "<group>"; };
 		75D5F3F0191EC270004AB296 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1623,21 +1599,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75B8346819233D400010931E /* libcrypto.a in Frameworks */,
+				9C346BF919D20E4F00E4B94F /* libcrypto.a in Frameworks */,
 				75878BC3192AED38002505AB /* MessageUI.framework in Frameworks */,
 				75D5F3C4191EC270004AB296 /* CoreGraphics.framework in Frameworks */,
 				75D5F3C6191EC270004AB296 /* UIKit.framework in Frameworks */,
 				75D5F3C2191EC270004AB296 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75D5F3E2191EC270004AB296 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75D5F3E7191EC270004AB296 /* XCTest.framework in Frameworks */,
-				75D5F3E9191EC270004AB296 /* UIKit.framework in Frameworks */,
-				75D5F3E8191EC270004AB296 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2591,10 +2557,6 @@
 			isa = PBXGroup;
 			children = (
 				7579FB6919231E7600CA56F4 /* bio_pk7.c */,
-				7579FB6A19231E7600CA56F4 /* dec.c */,
-				7579FB6D19231E7600CA56F4 /* enc.c */,
-				7579FB6F19231E7600CA56F4 /* example.c */,
-				7579FB7019231E7600CA56F4 /* example.h */,
 				7579FB7B19231E7600CA56F4 /* pk7_asn1.c */,
 				7579FB7C19231E7600CA56F4 /* pk7_attr.c */,
 				7579FB7D19231E7600CA56F4 /* pk7_dgst.c */,
@@ -2604,8 +2566,6 @@
 				7579FB8219231E7600CA56F4 /* pk7_smime.c */,
 				7579FB8319231E7600CA56F4 /* pkcs7.h */,
 				7579FB8419231E7600CA56F4 /* pkcs7err.c */,
-				7579FB8619231E7600CA56F4 /* sign.c */,
-				7579FB9719231E7600CA56F4 /* verify.c */,
 			);
 			path = pkcs7;
 			sourceTree = "<group>";
@@ -2932,7 +2892,6 @@
 			isa = PBXGroup;
 			children = (
 				75D5F3BE191EC270004AB296 /* breadwallet.app */,
-				75D5F3E5191EC270004AB296 /* BreadWalletTests.xctest */,
 				7579F7D919231A5D00CA56F4 /* libcrypto.a */,
 			);
 			name = Products;
@@ -3141,24 +3100,6 @@
 			productReference = 75D5F3BE191EC270004AB296 /* breadwallet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		75D5F3E4191EC270004AB296 /* BreadWalletTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75D5F3F9191EC270004AB296 /* Build configuration list for PBXNativeTarget "BreadWalletTests" */;
-			buildPhases = (
-				75D5F3E1191EC270004AB296 /* Sources */,
-				75D5F3E2191EC270004AB296 /* Frameworks */,
-				75D5F3E3191EC270004AB296 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				75D5F3EB191EC270004AB296 /* PBXTargetDependency */,
-			);
-			name = BreadWalletTests;
-			productName = BreadWalletTests;
-			productReference = 75D5F3E5191EC270004AB296 /* BreadWalletTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -3180,9 +3121,6 @@
 							};
 						};
 					};
-					75D5F3E4191EC270004AB296 = {
-						TestTargetID = 75D5F3BD191EC270004AB296;
-					};
 				};
 			};
 			buildConfigurationList = 75D5F3B9191EC270004AB296 /* Build configuration list for PBXProject "BreadWallet" */;
@@ -3200,7 +3138,6 @@
 			targets = (
 				75D5F3BD191EC270004AB296 /* breadwallet */,
 				7579F7D819231A5D00CA56F4 /* crypto */,
-				75D5F3E4191EC270004AB296 /* BreadWalletTests */,
 			);
 		};
 /* End PBXProject section */
@@ -3219,14 +3156,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75D5F3E3191EC270004AB296 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75D5F3F1191EC270004AB296 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -3242,7 +3171,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "VERSION=1.0.1h\nARCHIVE=openssl-$VERSION.tar.gz\nSHA1=b2239599c8bf8f7fc48590a55205c26abe560bf8\n\ncd $SRCROOT\nrm -rf $SRCROOT/openssl\nln -s openssl-$VERSION openssl\n\n([ -f $SRCROOT/$ARCHIVE ] && openssl sha1 $SRCROOT/$ARCHIVE | grep $SHA1) || \\\n(rm -rf $SRCROOT/openssl-* && curl -sSO http://www.openssl.org/source/$ARCHIVE && \\\nopenssl sha1 $SRCROOT/$ARCHIVE | grep $SHA1)\n\n[ -f $SRCROOT/openssl/ssl/tls_srp.c ] || tar -xvzf $ARCHIVE";
+			shellScript = "VERSION=1.0.1i\nARCHIVE=openssl-$VERSION.tar.gz\nSHA1=74eed314fa2c93006df8d26cd9fc630a101abd76\n\ncd $SRCROOT\nrm -rf $SRCROOT/openssl\nln -s openssl-$VERSION openssl\n\n([ -f $SRCROOT/$ARCHIVE ] && openssl sha1 $SRCROOT/$ARCHIVE | grep $SHA1) || \\\n(rm -rf $SRCROOT/openssl-* && curl -sSO http://www.openssl.org/source/$ARCHIVE && \\\nopenssl sha1 $SRCROOT/$ARCHIVE | grep $SHA1)\n\n[ -f $SRCROOT/openssl/ssl/tls_srp.c ] || tar -xvzf $ARCHIVE";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3318,7 +3247,6 @@
 				7579FCE619231E7700CA56F4 /* aes_ofb.c in Sources */,
 				7579FD9119231E7700CA56F4 /* cmll_misc.c in Sources */,
 				7579FFD119231E7700CA56F4 /* v3_crld.c in Sources */,
-				7579FF1519231E7700CA56F4 /* dec.c in Sources */,
 				7579FF1419231E7700CA56F4 /* bio_pk7.c in Sources */,
 				7579FFC319231E7700CA56F4 /* pcy_lib.c in Sources */,
 				7579FF2B19231E7700CA56F4 /* rand_err.c in Sources */,
@@ -3487,7 +3415,6 @@
 				7579FE1019231E7700CA56F4 /* dso_openssl.c in Sources */,
 				7579FDCD19231E7700CA56F4 /* des_old2.c in Sources */,
 				7579FD2D19231E7700CA56F4 /* x_crl.c in Sources */,
-				7579FF2319231E7700CA56F4 /* verify.c in Sources */,
 				7579FD2419231E7700CA56F4 /* tasn_enc.c in Sources */,
 				7579FE2119231E7700CA56F4 /* ec_oct.c in Sources */,
 				7579FD1519231E7700CA56F4 /* i2d_pu.c in Sources */,
@@ -3511,7 +3438,6 @@
 				7579FE4E19231E7700CA56F4 /* tb_asnmth.c in Sources */,
 				7579FFB019231E7700CA56F4 /* x509_lu.c in Sources */,
 				7579FD0D19231E7700CA56F4 /* bio_ndef.c in Sources */,
-				7579FF2219231E7700CA56F4 /* sign.c in Sources */,
 				7579FD4B19231E7700CA56F4 /* bf_nbio.c in Sources */,
 				7579FF6519231E7700CA56F4 /* rsa_saos.c in Sources */,
 				7579FD0219231E7700CA56F4 /* a_utf8.c in Sources */,
@@ -3535,7 +3461,6 @@
 				7579FCFF19231E7700CA56F4 /* a_time.c in Sources */,
 				7579FD0819231E7700CA56F4 /* asn1_par.c in Sources */,
 				7579FDFD19231E7700CA56F4 /* dsa_depr.c in Sources */,
-				7579FF1619231E7700CA56F4 /* enc.c in Sources */,
 				7579FD2E19231E7700CA56F4 /* x_exten.c in Sources */,
 				7579FD7119231E7700CA56F4 /* bn_lib.c in Sources */,
 				7579FD7419231E7700CA56F4 /* bn_mpi.c in Sources */,
@@ -3814,7 +3739,6 @@
 				7579FFD919231E7700CA56F4 /* v3_ncons.c in Sources */,
 				7579FFA419231E7700CA56F4 /* wp_block.c in Sources */,
 				7579FE7F19231E7700CA56F4 /* evp_pkey.c in Sources */,
-				7579FF1719231E7700CA56F4 /* example.c in Sources */,
 				7579FDDE19231E7700CA56F4 /* qud_cksm.c in Sources */,
 				7579FF9B19231E7700CA56F4 /* txt_db.c in Sources */,
 				7579FE7B19231E7700CA56F4 /* evp_fips.c in Sources */,
@@ -3909,14 +3833,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75D5F3E1191EC270004AB296 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75D5F3F3191EC270004AB296 /* BreadWalletTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -3924,11 +3840,6 @@
 			isa = PBXTargetDependency;
 			target = 7579F7D819231A5D00CA56F4 /* crypto */;
 			targetProxy = 7579F7FC19231B2100CA56F4 /* PBXContainerItemProxy */;
-		};
-		75D5F3EB191EC270004AB296 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 75D5F3BD191EC270004AB296 /* breadwallet */;
-			targetProxy = 75D5F3EA191EC270004AB296 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -4003,10 +3914,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "bd1478e1-7f3c-487c-ad49-a60b6e11769d";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = GCov_Build;
 		};
@@ -4026,8 +3938,11 @@
 					"$(SRCROOT)/openssl/include",
 				);
 				INFOPLIST_FILE = "BreadWallet/BreadWallet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = GCov_Build;
@@ -4055,28 +3970,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = GCov_Build;
-		};
-		754F4BCF194BBA94004AD9CA /* GCov_Build */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BreadWallet/BreadWallet-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BreadWalletTests/BreadWalletTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = GCov_Build;
 		};
@@ -4160,10 +4053,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "bd1478e1-7f3c-487c-ad49-a60b6e11769d";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -4193,10 +4087,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PROVISIONING_PROFILE = "bd1478e1-7f3c-487c-ad49-a60b6e11769d";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -4216,8 +4111,11 @@
 					"$(SRCROOT)/openssl/include",
 				);
 				INFOPLIST_FILE = "BreadWallet/BreadWallet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -4238,49 +4136,12 @@
 					"$(SRCROOT)/openssl/include",
 				);
 				INFOPLIST_FILE = "BreadWallet/BreadWallet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		75D5F3FA191EC270004AB296 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BreadWallet/BreadWallet-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BreadWalletTests/BreadWalletTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		75D5F3FB191EC270004AB296 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/breadwallet.app/breadwallet";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BreadWallet/BreadWallet-Prefix.pch";
-				INFOPLIST_FILE = "BreadWalletTests/BreadWalletTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -4313,16 +4174,6 @@
 				75D5F3F7191EC270004AB296 /* Debug */,
 				754F4BC9194BBA94004AD9CA /* GCov_Build */,
 				75D5F3F8191EC270004AB296 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75D5F3F9191EC270004AB296 /* Build configuration list for PBXNativeTarget "BreadWalletTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75D5F3FA191EC270004AB296 /* Debug */,
-				754F4BCF194BBA94004AD9CA /* GCov_Build */,
-				75D5F3FB191EC270004AB296 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -30,7 +30,7 @@
 #import <openssl/bn.h>
 
 #define MAX_TIME_DRIFT    (2*60*60)     // the furthest in the future a block is allowed to be timestamped
-#define MAX_PROOF_OF_WORK 0x1e0ffff0u   // highest value for difficulty target (higher values are less difficult)
+#define MAX_PROOF_OF_WORK 0x1e0fffffu   // highest value for difficulty target (higher values are less difficult)
 #define TARGET_TIMESPAN   (1*60) // the targeted timespan between difficulty target adjustments
 
 // convert difficulty target format to bignum, as per: https://github.com/bitcoin/bitcoin/blob/master/src/uint256.h#L323
@@ -252,11 +252,15 @@ totalTransactions:(uint32_t)totalTransactions hashes:(NSData *)hashes flags:(NSD
     if (! [_prevBlock isEqual:previous.blockHash] || _height != previous.height + 1) return NO;
     if ((_height % BLOCK_DIFFICULTY_INTERVAL) == 0 && time == 0) return NO;
 
+    
+    // simple deal with the first 6000 blocks
+    return YES;
+    
 #if BITCOIN_TESTNET
     //TODO: implement testnet difficulty rule check
     return YES; // don't worry about difficulty on testnet for now
-#endif
-
+#endif;
+    NSLog(@"_target=%u previous.target=%u",_target ,previous.target);
     if ((_height % BLOCK_DIFFICULTY_INTERVAL) != 0) return (_target == previous.target) ? YES : NO;
 
     BN_CTX *ctx = BN_CTX_new();
