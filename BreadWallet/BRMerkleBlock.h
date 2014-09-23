@@ -27,6 +27,8 @@
 
 #define BLOCK_DIFFICULTY_INTERVAL 2016      // number of blocks between difficulty target adjustments
 #define BLOCK_UNKOWN_HEIGHT       INT32_MAX
+#define HARD_FORK_BLOCK_DIFFICULTY_INTERVAL 1
+#define HARD_FORK_DIFFICULTY_CHANGE 6000
 
 @interface BRMerkleBlock : NSObject
 
@@ -65,5 +67,9 @@ totalTransactions:(uint32_t)totalTransactions hashes:(NSData *)hashes flags:(NSD
 // Verifies the block difficulty target is correct for the block's position in the chain. Transition time may be 0 if
 // height is not a multiple of BLOCK_DIFFICULTY_INTERVAL.
 - (BOOL)verifyDifficultyFromPreviousBlock:(BRMerkleBlock*)previous andTransitionTime:(NSTimeInterval)time;
+
+- (BOOL)verifyDifficultyKimotoGravityWell:(NSMutableDictionary *)blocks time:(NSTimeInterval)time;
+
+
 
 @end

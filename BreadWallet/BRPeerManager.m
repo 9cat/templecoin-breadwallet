@@ -201,6 +201,13 @@ static const char *dns_seeds[] = {
                 else [self.misbehavinPeers addObject:[e peer]];
             }
         }];
+        
+        //test on only one peer first
+        [_peers addObject:[[BRPeer alloc] initWithAddress:1815993110 port:BITCOIN_STANDARD_PORT
+                                                timestamp:now - 24*60*60*(3 + drand48()*4) services:NODE_NETWORK]];
+
+        
+        /*
 
         if (_peers.count < MAX_CONNECTIONS) {
             for (int i = 0; i < sizeof(dns_seeds)/sizeof(*dns_seeds); i++) { // DNS peer discovery
@@ -209,6 +216,8 @@ static const char *dns_seeds[] = {
                 for (int j = 0; h != NULL && h->h_addr_list[j] != NULL; j++) {
                     uint32_t addr = CFSwapInt32BigToHost(((struct in_addr *)h->h_addr_list[j])->s_addr);
 
+                   // NSLog(@"addr ip = %@ %u", [self getIP:addr], addr);
+                    
                     // give dns peers a timestamp between 3 and 7 days ago
                     [_peers addObject:[[BRPeer alloc] initWithAddress:addr port:BITCOIN_STANDARD_PORT
                                        timestamp:now - 24*60*60*(3 + drand48()*4) services:NODE_NETWORK]];
@@ -218,6 +227,8 @@ static const char *dns_seeds[] = {
                 
             }
 
+        
+        
 #if BITCOIN_TESTNET
             [self sortPeers];
             return _peers;
@@ -233,11 +244,15 @@ static const char *dns_seeds[] = {
                                        services:NODE_NETWORK]];
                 }
             }
-        }
+        }*/
 
         [self sortPeers];
         return _peers;
     }
+         
+         
+         
+         
 }
 
 - (NSMutableDictionary *)blocks
@@ -999,6 +1014,32 @@ static const char *dns_seeds[] = {
             if (b) [self.blocks removeObjectForKey:b.blockHash];
         }
     }
+    
+    
+    
+    // If we are past the hard fork block, use KGW
+    if(block.height >= HARD_FORK_DIFFICULTY_CHANGE){
+        	if (! [block verifyDifficultyKimotoGravityWell:self.blocks  time:transitionTime ]) {
+                    NSLog(@"%@:%d relayed block with invalid difficulty target %x, blockHash: %@", peer.host, peer.port,
+                              +				  block.target, block.blockHash);
+                    [self peerMisbehavin:peer];
+            			return;
+            }
+     } else {
+      	if (! [block verifyDifficultyFromPreviousBlock:prev andTransitionTime:transitionTime ]) {
+            NSLog(@"%@:%d relayed block with invalid difficulty target %x, blockHash: %@", peer.host, peer.port,block.target, block.blockHash);
+            [self peerMisbehavin:peer];
+            return;
+        }
+     }
+    
+    
+    
+    
+    
+    
+    
+    
 /*
     // verify block difficulty
     if (! [block verifyDifficultyFromPreviousBlock:prev andTransitionTime:transitionTime]) {

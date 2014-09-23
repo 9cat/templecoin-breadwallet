@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BeO-Yt-c4D">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="5100" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -1571,7 +1570,7 @@
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">templecoin-wallet v%ver%%net%
-copyright © 2014 Aaron Voisine
+copyright © 2014 Aaron Voisine,Temple
 
 this app is open source
 </string>
@@ -1590,7 +1589,7 @@ this app is open source
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="exchange rate data provided by blockchain.info/ticker">
+                                            <fragment content="exchange rate data provided by N/A">
                                                 <attributes>
                                                     <font key="NSFont" size="15" name="HelveticaNeue-Light"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>

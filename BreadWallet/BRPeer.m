@@ -272,8 +272,8 @@ services:(uint64_t)services
         [self.outputBuffer appendMessage:message type:type];
         
         
-        NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
-        NSLog(@"outputContent=%@ self.outputBuffer.length=%d   [self.outputStream hasSpaceAvailable]= %hhd",outputContent, self.outputBuffer.length, [self.outputStream hasSpaceAvailable]);
+        //NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
+        //NSLog(@"outputContent=%@ self.outputBuffer.length=%d   [self.outputStream hasSpaceAvailable]= %hhd",outputContent, self.outputBuffer.length, [self.outputStream hasSpaceAvailable]);
 
         while (self.outputBuffer.length > 0 && [self.outputStream hasSpaceAvailable]) {
             NSInteger l = [self.outputStream write:self.outputBuffer.bytes maxLength:self.outputBuffer.length];
@@ -958,9 +958,9 @@ services:(uint64_t)services
             while (self.outputBuffer.length > 0 && [self.outputStream hasSpaceAvailable]) {
                 
                 
-                     NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
-
-                     NSLog(@"outputContent=%@   l=%d",outputContent,[self.outputBuffer length]);
+                     //NSString* outputContent = [NSString stringWithFormat:@"%@", self.outputBuffer];
+                     //NSLog(@"outputContent=%@   l=%d",outputContent,[self.outputBuffer length]);
+                
                 NSInteger l = [self.outputStream write:self.outputBuffer.bytes maxLength:self.outputBuffer.length];
                 
                
