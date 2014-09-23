@@ -354,7 +354,15 @@ seed:(NSData *(^)())seed
         // assume we will be adding a change output (additional 34 bytes)
         //TODO: calculate the median of the lowest fee-per-kb that made it into the previous 144 blocks (24hrs)
         //NOTE: consider feedback effects if everyone uses the same algorithm to calculate fees, maybe add noise
-        if (fee) standardFee = 100000+((transaction.size + 34 + 999)/1000)*TX_FEE_PER_KB;
+        if (fee) {
+            standardFee = ((transaction.size + 34 + 999)/1000)*TX_FEE_PER_KB;
+            
+            
+            //templecoin: fee
+            if (standardFee< amount/10000  ){
+                standardFee = amount/10000;
+            }
+        }
             
         if (balance == amount + standardFee || balance >= amount + standardFee + TX_MIN_OUTPUT_AMOUNT) break;
     }

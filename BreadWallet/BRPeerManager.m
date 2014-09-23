@@ -39,9 +39,9 @@
 #import <netdb.h>
 
 #define FIXED_PEERS          @"FixedPeers"
-#define MAX_CONNECTIONS      3
+#define MAX_CONNECTIONS      10
 #define NODE_NETWORK         1  // services value indicating a node offers full blocks, not just headers
-#define PROTOCOL_TIMEOUT     3.0
+#define PROTOCOL_TIMEOUT     15.0
 #define MAX_CONNECT_FAILURES 99 // notify user of network problems after this many connect failures in a row
 
 #if BITCOIN_TESTNET
@@ -206,12 +206,15 @@ static const char *dns_seeds[] = {
             }
         }];
         
+        
+        /*
+        
         //test on only one peer first
         [_peers addObject:[[BRPeer alloc] initWithAddress:1815993110 port:BITCOIN_STANDARD_PORT
                                                 timestamp:now - 24*60*60*(3 + drand48()*4) services:NODE_NETWORK]];
-
+*/
         
-        /*
+   
 
         if (_peers.count < MAX_CONNECTIONS) {
             for (int i = 0; i < sizeof(dns_seeds)/sizeof(*dns_seeds); i++) { // DNS peer discovery
@@ -248,7 +251,11 @@ static const char *dns_seeds[] = {
                                        services:NODE_NETWORK]];
                 }
             }
-        }*/
+        }
+        
+        
+        
+        ////////dns peer if end
 
         [self sortPeers];
         return _peers;
