@@ -358,14 +358,25 @@ seed:(NSData *(^)())seed
             standardFee = ((transaction.size + 34 + 999)/1000)*TX_FEE_PER_KB;
             
             
-            //templecoin: fee
-            if (standardFee< amount/10000  ){
-                standardFee = amount/10000;
+
+        }
+        
+        //templecoin: fee
+        if (standardFee< 100000 ){
+            if (amount/10000.0>100000){
+                standardFee = amount/10000.0;
+            }else{
+                standardFee = 100000;
             }
         }
-            
+        
+        
+        
         if (balance == amount + standardFee || balance >= amount + standardFee + TX_MIN_OUTPUT_AMOUNT) break;
     }
+    
+    
+    NSLog(@"standardFee=%lluu",standardFee);
     
     if (balance < amount + standardFee) { // insufficent funds
         NSLog(@"Insufficient funds. %llu is less than transaction amount:%llu", balance, amount + standardFee);
@@ -593,6 +604,10 @@ seed:(NSData *(^)())seed
     for (NSNumber *amt in transaction.outputAmounts) {
         amount -= amt.unsignedLongLongValue;
     }
+    
+    //templecoin: fee
+    if (amount<100000)
+        amount=100000;
     
     return amount;
 }

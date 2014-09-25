@@ -39,10 +39,10 @@
 #import <netdb.h>
 
 #define FIXED_PEERS          @"FixedPeers"
-#define MAX_CONNECTIONS      3
+#define MAX_CONNECTIONS      7
 #define NODE_NETWORK         1  // services value indicating a node offers full blocks, not just headers
-#define PROTOCOL_TIMEOUT     3.0
-#define MAX_CONNECT_FAILURES 36 // notify user of network problems after this many connect failures in a row
+#define PROTOCOL_TIMEOUT     5.0
+#define MAX_CONNECT_FAILURES 999 // notify user of network problems after this many connect failures in a row
 
 #if BITCOIN_TESTNET
 
@@ -90,7 +90,7 @@ static const struct { uint32_t height; char *hash; time_t timestamp; uint32_t ta
 
 static const char *dns_seeds[] = {
 
-    "seed.templecoin.org","seed.templecoin.com"};
+    "seed.templecoin.org"};
 
 
 
