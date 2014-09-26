@@ -48,7 +48,7 @@
 #endif
 #define LOCAL_HOST         0x7f000001
 #define ZERO_HASH          @"0000000000000000000000000000000000000000000000000000000000000000".hexToData
-#define CONNECT_TIMEOUT    30.0
+#define CONNECT_TIMEOUT    5.0
 
 typedef enum {
     error = 0,
@@ -478,7 +478,7 @@ services:(uint64_t)services
 
         if ([MSG_VERSION isEqual:type]) [self acceptVersionMessage:message];
         else if ([MSG_VERACK isEqual:type]) [self acceptVerackMessage:message];
-        else if ([MSG_ADDR isEqual:type]) [self acceptAddrMessage:message];
+       // else if ([MSG_ADDR isEqual:type]) [self acceptAddrMessage:message]; //templecoin: relay peers
         else if ([MSG_INV isEqual:type]) [self acceptInvMessage:message];
         else if ([MSG_TX isEqual:type]) [self acceptTxMessage:message];
         else if ([MSG_HEADERS isEqual:type]) [self acceptHeadersMessage:message];
@@ -542,6 +542,7 @@ services:(uint64_t)services
     [self didConnect];
 }
 
+//templecoin: relay peers
 // TODO: relay addresses
 - (void)acceptAddrMessage:(NSData *)message
 {

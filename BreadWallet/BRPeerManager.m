@@ -39,9 +39,9 @@
 #import <netdb.h>
 
 #define FIXED_PEERS          @"FixedPeers"
-#define MAX_CONNECTIONS      100
+#define MAX_CONNECTIONS      3
 #define NODE_NETWORK         1  // services value indicating a node offers full blocks, not just headers
-#define PROTOCOL_TIMEOUT     4.0
+#define PROTOCOL_TIMEOUT     30.0
 #define MAX_CONNECT_FAILURES 9999 // notify user of network problems after this many connect failures in a row
 
 #if BITCOIN_TESTNET
@@ -240,19 +240,19 @@ static const char *dns_seeds[] = {
             [self sortPeers];
             return _peers;
 #endif
-            if (_peers.count < MAX_CONNECTIONS) {
+           if (_peers.count < MAX_CONNECTIONS) {
                 // if DNS peer discovery fails, fall back on a hard coded list of peers
                 // hard coded list is taken from the satoshi client, values need to be byte swapped to be host native
                 @synchronized(self){
-                for (NSNumber *address in [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]
+                 for (NSNumber *address in [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]
                                            pathForResource:FIXED_PEERS ofType:@"plist"]]) {
                     // give hard coded peers a timestamp between 7 and 14 days ago
                     [_peers addObject:[[BRPeer alloc] initWithAddress:CFSwapInt32(address.intValue)
                                        port:BITCOIN_STANDARD_PORT timestamp:now - 24*60*60*(7 + drand48()*7)
                                        services:NODE_NETWORK]];
-                }
-                }
-            }
+                 }
+                }//sync
+            } //endif
         }
         
         
