@@ -39,10 +39,10 @@
 #import <netdb.h>
 
 #define FIXED_PEERS          @"FixedPeers"
-#define MAX_CONNECTIONS      10
+#define MAX_CONNECTIONS      7
 #define NODE_NETWORK         1  // services value indicating a node offers full blocks, not just headers
-#define PROTOCOL_TIMEOUT     15.0
-#define MAX_CONNECT_FAILURES 99 // notify user of network problems after this many connect failures in a row
+#define PROTOCOL_TIMEOUT     5.0
+#define MAX_CONNECT_FAILURES 999 // notify user of network problems after this many connect failures in a row
 
 #if BITCOIN_TESTNET
 
@@ -90,7 +90,7 @@ static const struct { uint32_t height; char *hash; time_t timestamp; uint32_t ta
 
 static const char *dns_seeds[] = {
 
-    "seed.templecoin.org","seed.templecoin.com"};
+    "seed.templecoin.org"};
 
 
 
@@ -207,12 +207,12 @@ static const char *dns_seeds[] = {
         }];
         
         
-        /*
         
+        //templecoin:
         //test on only one peer first
         [_peers addObject:[[BRPeer alloc] initWithAddress:1815993110 port:BITCOIN_STANDARD_PORT
                                                 timestamp:now - 24*60*60*(3 + drand48()*4) services:NODE_NETWORK]];
-*/
+
         
    
 
@@ -223,7 +223,7 @@ static const char *dns_seeds[] = {
                 for (int j = 0; h != NULL && h->h_addr_list[j] != NULL; j++) {
                     uint32_t addr = CFSwapInt32BigToHost(((struct in_addr *)h->h_addr_list[j])->s_addr);
 
-                   // NSLog(@"addr ip = %@ %u", [self getIP:addr], addr);
+                    NSLog(@" ip = %@  addr=%u", [self getIP:addr], addr);
                     
                     // give dns peers a timestamp between 3 and 7 days ago
                     [_peers addObject:[[BRPeer alloc] initWithAddress:addr port:BITCOIN_STANDARD_PORT

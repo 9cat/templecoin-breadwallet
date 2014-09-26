@@ -408,7 +408,14 @@ sequence:(uint32_t)sequence
 
 - (uint64_t)standardFee
 {
-    return 100000+((self.size + 999)/1000)*TX_FEE_PER_KB;
+    
+    //templecoin: fee
+    //return ((self.size + 999)/1000)*TX_FEE_PER_KB;
+    
+     uint64_t fee = ((self.size + 999)/1000)*TX_FEE_PER_KB;
+        if (fee<100000)
+            fee = 100000;
+    return fee;
 }
 
 - (NSUInteger)hash
