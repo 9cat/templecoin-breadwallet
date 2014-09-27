@@ -98,7 +98,7 @@
 "checking private key balance..." = "checking private key balance...";
 
 /* No comment provided by engineer. */
-"choose a pin" = "choose a pin";
+"choose a pin" = "选择个人数字Pin密码";
 
 /* No comment provided by engineer. */
 "clipboard doesn't contain a valid bitcoin address" = "clipboard doesn't contain a valid templecoin address";
@@ -188,7 +188,7 @@
 "id:" = "id:";
 
 /* No comment provided by engineer. */
-"ignore" = "ignore";
+"ignore" = "忽略";
 
 /* No comment provided by engineer. */
 "import private key" = "import private key";
