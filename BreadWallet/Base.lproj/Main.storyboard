@@ -1757,7 +1757,7 @@ Use it to restore your wallet on another device if this one is ever lost or brok
                                 %no-eye%
 
       DO NOT let anyone see your backup
-      phrase or they can spend your bitcoins.
+      phrase or they can spend your templecoins.
 
 
                                 %no-shot%
@@ -2872,7 +2872,7 @@ Cgo
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="EQG-Km-ZKY">
-                                <rect key="frame" x="29" y="149" width="263" height="75"/>
+                                <rect key="frame" x="29" y="130" width="266" height="94"/>
                                 <attributedString key="attributedText">
                                     <fragment content="this is your wallet backup phrase">
                                         <attributes>
@@ -2885,7 +2885,7 @@ Cgo
                                         <string key="content">
 
 WRITE IT DOWN and keep it safe. Lose
-it and you may lose your bitcoins forever.</string>
+it and you may lose your templecoins forever.</string>
                                         <attributes>
                                             <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="15" name="HelveticaNeue-Light"/>
@@ -3000,7 +3000,7 @@ it and you may lose your bitcoins forever.</string>
                     <navigationItem key="navigationItem" id="pSA-60-Zeg">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="9QQ-Dq-BDV">
-                            <rect key="frame" x="113" y="14.5" width="94" height="15"/>
+                            <rect key="frame" x="113" y="15" width="94" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="breadwallet" translatesAutoresizingMaskIntoConstraints="NO" id="liH-WQ-uDo">
@@ -3026,7 +3026,7 @@ it and you may lose your bitcoins forever.</string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1949" y="2045"/>
+            <point key="canvasLocation" x="1949" y="2064"/>
         </scene>
     </scenes>
     <resources>
