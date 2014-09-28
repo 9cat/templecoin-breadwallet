@@ -444,8 +444,9 @@ static NSData *getKeychainData(NSString *key)
             self.localFormat.currencySymbol = json[self.localCurrencyCode][@"symbol"];
             self.localFormat.currencyCode = self.localCurrencyCode;
         }
-
-        _localCurrencyPrice = [json[self.localCurrencyCode][@"last"] doubleValue];
+//templecoin:
+		double usdPrice = [json[self.localCurrencyCode][@"USD"] doubleValue];
+        _localCurrencyPrice = [json[self.localCurrencyCode][@"last"] doubleValue]/usdPrice;
         self.localFormat.maximum = @((MAX_MONEY/SATOSHIS)*self.localCurrencyPrice);
         _currencyCodes = [NSArray arrayWithArray:json.allKeys];
         
