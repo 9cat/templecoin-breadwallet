@@ -650,10 +650,10 @@ completion:(void (^)(BRTransaction *tx, NSError *error))completion
    
   
     
-   // NSString *ret = [self.localFormat stringFromNumber:@(self.localCurrencyPrice*amount/SATOSHIS)];
-    //templecoin:
-    NSString *ret = [self.localFormat stringFromNumber:@(1.0*amount/SATOSHIS)];
-    return ret;
+    NSString *ret = [self.localFormat stringFromNumber:@(self.localCurrencyPrice*amount/SATOSHIS)];
+    //templecoin:ret 
+    //NSString *ret = [self.localFormat stringFromNumber:@(1.0*amount/SATOSHIS)];
+    //return ret;
 
     // if the amount is too small to be represented in local currency (but is != 0) then return a string like "<$0.01"
     if (amount > 0 && self.localCurrencyPrice*amount/SATOSHIS + DBL_EPSILON <
