@@ -1,27 +1,27 @@
 
 /* Class = "IBUILabel"; text = "Detail"; ObjectID = "00M-e1-IWY"; */
-"00M-e1-IWY.text" = "Detail";
+"00M-e1-IWY.text" = "详细";
 
 /* Class = "IBUILabel"; text = "ƀ 1,000,000"; ObjectID = "0ui-yr-JjJ"; */
 "0ui-yr-JjJ.text" = "ƀ 1,000,000";
 
 /* Class = "IBUILabel"; text = "start/restore another wallet"; ObjectID = "1Vn-hV-iDI"; */
-"1Vn-hV-iDI.text" = "start/restore another wallet";
+"1Vn-hV-iDI.text" = "创建/恢复一个新钱包";
 
 /* Class = "IBUINavigationItem"; title = "ƀ 0.00 ($0.00)"; ObjectID = "3hG-i3-g4Y"; */
 "3hG-i3-g4Y.title" = "ƀ 0.00 ($0.00)";
 
 /* Class = "IBUIButton"; normalTitle = "restore from backup"; ObjectID = "4w7-k8-9wY"; */
-"4w7-k8-9wY.normalTitle" = "restore from backup";
+"4w7-k8-9wY.normalTitle" = "从备份中恢复";
 
 /* Class = "IBUILabel"; text = "ask"; ObjectID = "9B6-kc-khb"; */
-"9B6-kc-khb.text" = "ask";
+"9B6-kc-khb.text" = "要求";
 
 /* Class = "IBUIBarButtonItem"; title = " "; ObjectID = "9L3-gM-TgP"; */
 "9L3-gM-TgP.title" = " ";
 
 /* Class = "IBUIButton"; normalTitle = "generate backup phrase"; ObjectID = "A4M-yq-26d"; */
-"A4M-yq-26d.normalTitle" = "generate backup phrase";
+"A4M-yq-26d.normalTitle" = "创建备份词组";
 
 /* Class = "IBUITextField"; placeholder = "ƀ 0.00"; ObjectID = "DLS-lz-uxJ"; */
 "DLS-lz-uxJ.placeholder" = "ƀ 0.00";
@@ -36,10 +36,10 @@
 "Fdh-Ze-PZW.text" = "○  ○  ○  ○";
 
 /* Class = "IBUILabel"; text = "sent"; ObjectID = "FjB-H2-BnK"; */
-"FjB-H2-BnK.text" = "sent";
+"FjB-H2-BnK.text" = "发送完成";
 
 /* Class = "IBUILabel"; text = "Detail"; ObjectID = "HrP-wv-Y1B"; */
-"HrP-wv-Y1B.text" = "Detail";
+"HrP-wv-Y1B.text" = "详细";
 
 /* Class = "IBUIBarButtonItem"; title = " "; ObjectID = "Huq-Vk-LaF"; */
 "Huq-Vk-LaF.title" = " ";
@@ -84,34 +84,34 @@
 "SgP-DR-cyl.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
 /* Class = "IBUILabel"; text = "not connected"; ObjectID = "UyF-OV-QVY"; */
-"UyF-OV-QVY.text" = "not connected";
+"UyF-OV-QVY.text" = "未能连接节点成功";
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "VM4-Ie-x8Z"; */
-"VM4-Ie-x8Z.text" = "Title";
+"VM4-Ie-x8Z.text" = "标题";
 
 /* Class = "IBUILabel"; text = "remove standard fees"; ObjectID = "WB9-ti-D76"; */
-"WB9-ti-D76.text" = "remove standard fees";
+"WB9-ti-D76.text" = "去除标准网络费用";
 
 /* Class = "IBUILabel"; text = "subtitle"; ObjectID = "WHQ-zW-IjD"; */
-"WHQ-zW-IjD.text" = "subtitle";
+"WHQ-zW-IjD.text" = "子标题";
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "WsQ-ej-Wh4"; */
-"WsQ-ej-Wh4.text" = "Title";
+"WsQ-ej-Wh4.text" = "标题";
 
 /* Class = "IBUILabel"; text = "amount:"; ObjectID = "XJu-9x-HqQ"; */
-"XJu-9x-HqQ.text" = "amount:";
+"XJu-9x-HqQ.text" = "总额:";
 
 /* Class = "IBUIButton"; normalTitle = "1WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"; ObjectID = "XV7-2s-hZs"; */
-"XV7-2s-hZs.normalTitle" = "1WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
+"XV7-2s-hZs.normalTitle" = "TWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
 
 /* Class = "IBUILabel"; text = "Enter this wallet's backup phrase to wipe it and start/restore another. Your current balance remains on this phrase."; ObjectID = "YC6-rN-4P5"; */
-"YC6-rN-4P5.text" = "Enter this wallet's backup phrase to wipe it and start/restore another. Your current balance remains on this phrase.";
+"YC6-rN-4P5.text" = "输入之前备份的词组来清除钱包，创建或恢复另一个新钱包。你当前的余额会保留在这个词组中";
 
 /* Class = "IBUILabel"; text = "($0.00)"; ObjectID = "ZH0-Ng-7xb"; */
 "ZH0-Ng-7xb.text" = "($0.00)";
 
 /* Class = "IBUILabel"; text = "to: 1WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"; ObjectID = "ZXO-dD-jiQ"; */
-"ZXO-dD-jiQ.text" = "to: 1WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
+"ZXO-dD-jiQ.text" = "to: TWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW";
 
 /* Class = "IBUIButton"; normalTitle = "◉"; ObjectID = "Zbe-Kx-XvG"; */
 "Zbe-Kx-XvG.normalTitle" = "◉";
@@ -120,49 +120,49 @@
 "b8y-tJ-xAB.normalTitle" = "4";
 
 /* Class = "IBUIButton"; normalTitle = "pay address from clipboard"; ObjectID = "bfj-xS-5rN"; */
-"bfj-xS-5rN.normalTitle" = "pay address from clipboard";
+"bfj-xS-5rN.normalTitle" = "从剪贴板中获得支付地址";
 
 /* Class = "IBUILabel"; text = "local currency"; ObjectID = "byz-51-A0c"; */
-"byz-51-A0c.text" = "local currency";
+"byz-51-A0c.text" = "当地货币";
 
 /* Class = "IBUIBarButtonItem"; title = " "; ObjectID = "cSD-3n-43a"; */
 "cSD-3n-43a.title" = " ";
 
 /* Class = "IBUIButton"; normalTitle = "scan QR code"; ObjectID = "ce6-Wi-wk4"; */
-"ce6-Wi-wk4.normalTitle" = "scan QR code";
+"ce6-Wi-wk4.normalTitle" = "扫扫QR二维码";
 
 /* Class = "IBUILabel"; text = "I wrote it down:"; ObjectID = "cyp-mV-Bhd"; */
-"cyp-mV-Bhd.text" = "I wrote it down:";
+"cyp-mV-Bhd.text" = "我写下:";
 
 /* Class = "IBUIButton"; normalTitle = "9"; ObjectID = "dBP-3X-1o6"; */
 "dBP-3X-1o6.normalTitle" = "9";
 
 /* Class = "IBUIButton"; normalTitle = "new wallet"; ObjectID = "dOa-zm-TDG"; */
-"dOa-zm-TDG.normalTitle" = "new wallet";
+"dOa-zm-TDG.normalTitle" = "创建新钱包";
 
 /* Class = "IBUILabel"; text = "unconfirmed"; ObjectID = "eJ2-5h-DO2"; */
-"eJ2-5h-DO2.text" = "unconfirmed";
+"eJ2-5h-DO2.text" = "未确认";
 
 /* Class = "IBUIButton"; normalTitle = "show"; ObjectID = "efL-Cj-Aho"; */
-"efL-Cj-Aho.normalTitle" = "show";
+"efL-Cj-Aho.normalTitle" = "显示";
 
 /* Class = "IBUIButton"; normalTitle = "        "; ObjectID = "f0J-5L-WJY"; */
 "f0J-5L-WJY.normalTitle" = "        ";
 
 /* Class = "IBUIBarButtonItem"; title = "pay"; ObjectID = "f4B-BU-eu2"; */
-"f4B-BU-eu2.title" = "pay";
+"f4B-BU-eu2.title" = "支付";
 
 /* Class = "IBUINavigationItem"; title = "confirm:"; ObjectID = "fQN-xb-SYb"; */
-"fQN-xb-SYb.title" = "confirm:";
+"fQN-xb-SYb.title" = "确认:";
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "fVX-tM-tZx"; */
-"fVX-tM-tZx.text" = "Title";
+"fVX-tM-tZx.text" = "标题";
 
 /* Class = "IBUILabel"; text = "USD"; ObjectID = "gQu-dT-kF0"; */
-"gQu-dT-kF0.text" = "USD";
+"gQu-dT-kF0.text" = "美元";
 
 /* Class = "IBUILabel"; text = "subtitle"; ObjectID = "gZx-fI-siU"; */
-"gZx-fI-siU.text" = "subtitle";
+"gZx-fI-siU.text" = "子标题";
 
 /* Class = "IBUINavigationItem"; title = "ƀ 0.00 ($0.00)"; ObjectID = "h6T-AD-8zb"; */
 "h6T-AD-8zb.title" = "ƀ 0.00 ($0.00)";
@@ -177,43 +177,43 @@
 "jGg-9z-XEe.normalTitle" = "3";
 
 /* Class = "IBUILabel"; text = "send money:"; ObjectID = "l5l-JR-LKA"; */
-"l5l-JR-LKA.text" = "send money:";
+"l5l-JR-LKA.text" = "汇款:";
 
 /* Class = "IBUIButton"; normalTitle = "cancel"; ObjectID = "lzQ-at-alt"; */
-"lzQ-at-alt.normalTitle" = "cancel";
+"lzQ-at-alt.normalTitle" = "取消";
 
 /* Class = "IBUILabel"; text = "Title"; ObjectID = "ncN-gc-vpQ"; */
-"ncN-gc-vpQ.text" = "Title";
+"ncN-gc-vpQ.text" = "标题";
 
 /* Class = "IBUINavigationItem"; title = "backup phrase:"; ObjectID = "ooJ-EA-DFl"; */
-"ooJ-EA-DFl.title" = "backup phrase:";
+"ooJ-EA-DFl.title" = "备份词组:";
 
 /* Class = "IBUIButton"; normalTitle = "7"; ObjectID = "p8P-3o-INx"; */
 "p8P-3o-INx.normalTitle" = "7";
 
 /* Class = "IBUILabel"; text = "Detail"; ObjectID = "pXc-8D-8Gh"; */
-"pXc-8D-8Gh.text" = "Detail";
+"pXc-8D-8Gh.text" = "详细内容";
 
 /* Class = "IBUILabel"; text = "($1,000.00)"; ObjectID = "qNV-Ka-14n"; */
 "qNV-Ka-14n.text" = "($1,000.00)";
 
 /* Class = "IBUILabel"; text = "receive money:"; ObjectID = "qel-3J-2VC"; */
-"qel-3J-2VC.text" = "receive money:";
+"qel-3J-2VC.text" = "收款:";
 
 /* Class = "IBUITableViewController"; title = "transaction details"; ObjectID = "s4T-yd-VfX"; */
-"s4T-yd-VfX.title" = "transaction details";
+"s4T-yd-VfX.title" = "交易细节";
 
 /* Class = "IBUILabel"; text = "no transactions"; ObjectID = "t1j-JZ-FW0"; */
-"t1j-JZ-FW0.text" = "no transactions";
+"t1j-JZ-FW0.text" = "无交易细节";
 
 /* Class = "IBUILabel"; text = "subtitle"; ObjectID = "u6Z-kF-cAT"; */
-"u6Z-kF-cAT.text" = "subtitle";
+"u6Z-kF-cAT.text" = "子标题";
 
 /* Class = "IBUILabel"; text = "ƀ 1,000,000"; ObjectID = "ue1-2S-fEr"; */
 "ue1-2S-fEr.text" = "ƀ 1,000,000";
 
 /* Class = "IBUINavigationItem"; title = "backup phrase:"; ObjectID = "wJz-hG-RRz"; */
-"wJz-hG-RRz.title" = "backup phrase:";
+"wJz-hG-RRz.title" = "备份词组:";
 
 /* Class = "IBUILabel"; text = "($1,000.00)"; ObjectID = "wd8-oB-KWn"; */
 "wd8-oB-KWn.text" = "($1,000.00)";
@@ -222,4 +222,4 @@
 "xl3-sr-16q.text" = "88.8%";
 
 /* Class = "IBUILabel"; text = "enter pin"; ObjectID = "zhS-gG-oV0"; */
-"zhS-gG-oV0.text" = "enter pin";
+"zhS-gG-oV0.text" = "输入个人数字PIN密码";
