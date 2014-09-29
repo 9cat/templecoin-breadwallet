@@ -69,7 +69,7 @@
 
 /* No comment provided by engineer. */
 "Bitcoin address" = "通普币地址";
-总是由
+
 /* No comment provided by engineer. */
 "Bitcoin addresses can also be copied to the clipboard. A bitcoin address always starts with '1' or '3'." = "通普币地址可以复制到你的剪贴板上。一个通普币地址总是由字母'T'开头";
 
@@ -77,7 +77,7 @@
 "bitcoin network fee" = "通普币地址网络费用";
 
 /* No comment provided by engineer. */
-"bitcoin network fees are only optional for high priority transactions (removal may cause delays)" = "通普币地址用于提高中继的优先等级，不提供网络费将直接导致无法送达接收端";
+"bitcoin network fees are only optional for high priority transactions (removal may cause delays)" = "通普币网络费用是用于提高交易处理优先等级，如不提供网络费将直接导致无法送达接收端";
 
 /* No comment provided by engineer. */
 "bitcoin payments can't be less than %@" = "通普币付款不可以少于 %@";
@@ -263,13 +263,13 @@
 "Receive bitcoins at this address: %@" = "从这地址收到通普币: %@";
 
 /* No comment provided by engineer. */
-"received  " = "已经收到  ";
+"received  " = "已收到  ";
 
 /* No comment provided by engineer. */
 "recent transactions" = "最近的交易记录";
 
 /* No comment provided by engineer. */
-"recieved" = "已经收到";
+"received" = "已收到";
 
 /* No comment provided by engineer. */
 "reenter pin" = "多次输入PIN";
@@ -314,7 +314,7 @@
 "send as email" = "用邮件发送";
 
 /* No comment provided by engineer. */
-"send as message" = "当信息发送";
+"send as message" = "从短信发送";
 
 /* No comment provided by engineer. */
 "spent address" = "已消费的地址";
@@ -359,7 +359,7 @@
 "This is your bitcoin address. Tap to copy it or send it by email or sms. The address will change each time you receive funds, but old addresses always work." = "这是你的通普币地址，轻点它可以复制，或者发送它到邮箱或短信。每次你接收到一笔费用，这个地址会变为一个新的地址，然而你的旧地址仍然有效";
 
 /* No comment provided by engineer. */
-"This is your bitcoin balance. Bitcoin is a currency. The exchange rate changes with the market." = "这是你的通普币余额，通普币是一种电子货币，它的汇率由交易市场决定，但在5年内强行稳定于1:1 USD";
+"This is your bitcoin balance. Bitcoin is a currency. The exchange rate changes with the market." = "这是你的通普币余额，通普币是一种电子货币，它的汇率由交易市场决定，但在5年内强行稳定于1:1 美元";
 
 /* No comment provided by engineer. */
 "this payment address is already in your wallet" = "这个付款地址已经存在于你的钱包中";

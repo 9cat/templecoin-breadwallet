@@ -40,10 +40,9 @@
 #import "NSMutableData+Bitcoin.h"
 #import "NSData+Hash.h"
 
-#define SCAN_TIP      NSLocalizedString(@"Scan someone else's QR code to get their templecoin address. "\
+#define SCAN_TIP      NSLocalizedString(@"Scan someone else's QR code to get their bitcoin address. "\
                                          "You can send a payment to anyone with an address.", nil)
-#define CLIPBOARD_TIP NSLocalizedString(@"Templecoin addresses can also be copied to the clipboard. "\
-                                         "A templecoin address always starts with 'T'.", nil)
+#define CLIPBOARD_TIP NSLocalizedString(@"Bitcoin addresses can also be copied to the clipboard. A bitcoin address always starts with '1' or '3'.", nil)
 
 #define LOCK @"\xF0\x9F\x94\x92" // unicode lock symbol U+1F512 (utf-8)
 #define REDX @"\xE2\x9D\x8C"     // unicode cross mark U+274C, red x emoji (utf-8)
