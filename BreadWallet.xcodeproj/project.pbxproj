@@ -664,6 +664,8 @@
 		9C23CDB419F5B9BC0087AF4C /* Countly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23CDAE19F5B9BC0087AF4C /* Countly.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23CDB619F5B9BC0087AF4C /* CountlyDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23CDB219F5B9BC0087AF4C /* CountlyDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C23CDB719F5C0080087AF4C /* Countly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C23CDAF19F5B9BC0087AF4C /* Countly.xcdatamodeld */; };
+		9C23CDB919F5C0FD0087AF4C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C23CDB819F5C0FD0087AF4C /* CoreData.framework */; };
+		9C23CDBB19F5C1030087AF4C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C23CDBA19F5C1030087AF4C /* CoreTelephony.framework */; };
 		9C346BF919D20E4F00E4B94F /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7579F7D919231A5D00CA56F4 /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
@@ -1596,6 +1598,8 @@
 		9C23CDB019F5B9BC0087AF4C /* Countly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Countly.xcdatamodel; sourceTree = "<group>"; };
 		9C23CDB119F5B9BC0087AF4C /* CountlyDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountlyDB.h; path = "countly-sdk-ios-master/CountlyDB.h"; sourceTree = "<group>"; };
 		9C23CDB219F5B9BC0087AF4C /* CountlyDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountlyDB.m; path = "countly-sdk-ios-master/CountlyDB.m"; sourceTree = "<group>"; };
+		9C23CDB819F5C0FD0087AF4C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9C23CDBA19F5C1030087AF4C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		9C8FC26A19D7390800004FA3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9C8FC26B19D7390800004FA3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9C8FC26C19D7390800004FA3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -1614,6 +1618,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C23CDBB19F5C1030087AF4C /* CoreTelephony.framework in Frameworks */,
+				9C23CDB919F5C0FD0087AF4C /* CoreData.framework in Frameworks */,
 				9C346BF919D20E4F00E4B94F /* libcrypto.a in Frameworks */,
 				75878BC3192AED38002505AB /* MessageUI.framework in Frameworks */,
 				75D5F3C4191EC270004AB296 /* CoreGraphics.framework in Frameworks */,
@@ -2916,6 +2922,8 @@
 		75D5F3C0191EC270004AB296 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C23CDBA19F5C1030087AF4C /* CoreTelephony.framework */,
+				9C23CDB819F5C0FD0087AF4C /* CoreData.framework */,
 				75878BC2192AED38002505AB /* MessageUI.framework */,
 				75D5F3C1191EC270004AB296 /* Foundation.framework */,
 				75D5F3C3191EC270004AB296 /* CoreGraphics.framework */,
@@ -3141,7 +3149,7 @@
 				ORGANIZATIONNAME = "Aaron Voisine";
 				TargetAttributes = {
 					75D5F3BD191EC270004AB296 = {
-						DevelopmentTeam = 6DZ74GKM2K;
+						DevelopmentTeam = 48R5JDQE6A;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -3955,7 +3963,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "bd1478e1-7f3c-487c-ad49-a60b6e11769d";
+				PROVISIONING_PROFILE = "fa7bcc0c-56ca-4688-a128-8d2292a5089d";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s amd64";
 			};
@@ -3979,7 +3987,7 @@
 				INFOPLIST_FILE = "BreadWallet/BreadWallet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fa7bcc0c-56ca-4688-a128-8d2292a5089d";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s amd64";
 				WRAPPER_EXTENSION = app;
@@ -4094,7 +4102,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "bd1478e1-7f3c-487c-ad49-a60b6e11769d";
+				PROVISIONING_PROFILE = "fa7bcc0c-56ca-4688-a128-8d2292a5089d";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 armv7s amd64";
 			};
@@ -4128,7 +4136,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "bd1478e1-7f3c-487c-ad49-a60b6e11769d";
+				PROVISIONING_PROFILE = "fa7bcc0c-56ca-4688-a128-8d2292a5089d";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s amd64";
@@ -4153,7 +4161,7 @@
 				INFOPLIST_FILE = "BreadWallet/BreadWallet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fa7bcc0c-56ca-4688-a128-8d2292a5089d";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s amd64";
 				WRAPPER_EXTENSION = app;
@@ -4178,7 +4186,7 @@
 				INFOPLIST_FILE = "BreadWallet/BreadWallet-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fa7bcc0c-56ca-4688-a128-8d2292a5089d";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s amd64";
 				WRAPPER_EXTENSION = app;
