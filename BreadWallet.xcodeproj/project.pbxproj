@@ -660,6 +660,10 @@
 		75D5F3DE191EC270004AB296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D5F3DC191EC270004AB296 /* Main.storyboard */; };
 		75D5F3E0191EC270004AB296 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D5F3DF191EC270004AB296 /* Images.xcassets */; };
 		84F68C8A1975E9E2002FC300 /* BRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F68C891975E9E2002FC300 /* BRScanViewController.m */; };
+		9C23CDB319F5B9BC0087AF4C /* Countly_OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23CDAC19F5B9BC0087AF4C /* Countly_OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C23CDB419F5B9BC0087AF4C /* Countly.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23CDAE19F5B9BC0087AF4C /* Countly.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C23CDB619F5B9BC0087AF4C /* CountlyDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C23CDB219F5B9BC0087AF4C /* CountlyDB.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C23CDB719F5C0080087AF4C /* Countly.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C23CDAF19F5B9BC0087AF4C /* Countly.xcdatamodeld */; };
 		9C346BF919D20E4F00E4B94F /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7579F7D919231A5D00CA56F4 /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
@@ -1585,6 +1589,13 @@
 		84C92C67197C3E0300BD1664 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
 		84F68C881975E9E2002FC300 /* BRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRScanViewController.h; sourceTree = "<group>"; };
 		84F68C891975E9E2002FC300 /* BRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRScanViewController.m; sourceTree = "<group>"; };
+		9C23CDAB19F5B9BC0087AF4C /* Countly_OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Countly_OpenUDID.h; path = "countly-sdk-ios-master/Countly_OpenUDID.h"; sourceTree = "<group>"; };
+		9C23CDAC19F5B9BC0087AF4C /* Countly_OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Countly_OpenUDID.m; path = "countly-sdk-ios-master/Countly_OpenUDID.m"; sourceTree = "<group>"; };
+		9C23CDAD19F5B9BC0087AF4C /* Countly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Countly.h; path = "countly-sdk-ios-master/Countly.h"; sourceTree = "<group>"; };
+		9C23CDAE19F5B9BC0087AF4C /* Countly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Countly.m; path = "countly-sdk-ios-master/Countly.m"; sourceTree = "<group>"; };
+		9C23CDB019F5B9BC0087AF4C /* Countly.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Countly.xcdatamodel; sourceTree = "<group>"; };
+		9C23CDB119F5B9BC0087AF4C /* CountlyDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountlyDB.h; path = "countly-sdk-ios-master/CountlyDB.h"; sourceTree = "<group>"; };
+		9C23CDB219F5B9BC0087AF4C /* CountlyDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountlyDB.m; path = "countly-sdk-ios-master/CountlyDB.m"; sourceTree = "<group>"; };
 		9C8FC26A19D7390800004FA3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		9C8FC26B19D7390800004FA3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9C8FC26C19D7390800004FA3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -2885,6 +2896,7 @@
 		75D5F3B5191EC270004AB296 = {
 			isa = PBXGroup;
 			children = (
+				9C23CDAA19F5B99E0087AF4C /* Countly */,
 				75D5F3C7191EC270004AB296 /* BreadWallet */,
 				75D5F3EC191EC270004AB296 /* BreadWalletTests */,
 				75D5F3C0191EC270004AB296 /* Frameworks */,
@@ -3063,6 +3075,20 @@
 				84C92C67197C3E0300BD1664 /* x509v3.h */,
 			);
 			path = openssl;
+			sourceTree = "<group>";
+		};
+		9C23CDAA19F5B99E0087AF4C /* Countly */ = {
+			isa = PBXGroup;
+			children = (
+				9C23CDAB19F5B9BC0087AF4C /* Countly_OpenUDID.h */,
+				9C23CDAC19F5B9BC0087AF4C /* Countly_OpenUDID.m */,
+				9C23CDAD19F5B9BC0087AF4C /* Countly.h */,
+				9C23CDAE19F5B9BC0087AF4C /* Countly.m */,
+				9C23CDAF19F5B9BC0087AF4C /* Countly.xcdatamodeld */,
+				9C23CDB119F5B9BC0087AF4C /* CountlyDB.h */,
+				9C23CDB219F5B9BC0087AF4C /* CountlyDB.m */,
+			);
+			name = Countly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3809,6 +3835,7 @@
 				752E28CF19234C3600DB5A3C /* BRBIP39Mnemonic.m in Sources */,
 				752E28DA19234C3600DB5A3C /* BRWallet.m in Sources */,
 				752E28DB19234C3600DB5A3C /* BRWalletManager.m in Sources */,
+				9C23CDB719F5C0080087AF4C /* Countly.xcdatamodeld in Sources */,
 				752E28D319234C3600DB5A3C /* BRMerkleBlock.m in Sources */,
 				752E28D019234C3600DB5A3C /* BRBloomFilter.m in Sources */,
 				752E28D619234C3600DB5A3C /* BRPeer.m in Sources */,
@@ -3817,11 +3844,13 @@
 				75242C851968876500CF40E7 /* BRPINViewController.m in Sources */,
 				752E28D519234C3600DB5A3C /* BRPaymentRequest.m in Sources */,
 				7525B619192453840041C0F2 /* BRNavigationBar.m in Sources */,
+				9C23CDB419F5B9BC0087AF4C /* Countly.m in Sources */,
 				75878BC1192AEC3F002505AB /* BRReceiveViewController.m in Sources */,
 				75878BBF192ACD46002505AB /* BRAmountViewController.m in Sources */,
 				759816E719357D6F005060EA /* BRBubbleView.m in Sources */,
 				75878BC6192B1AF0002505AB /* BRSettingsViewController.m in Sources */,
 				757BE7E3192C0E9D0061CB20 /* BRRestoreViewController.m in Sources */,
+				9C23CDB619F5B9BC0087AF4C /* CountlyDB.m in Sources */,
 				757BE7E6192C1FF70061CB20 /* BRWelcomeViewController.m in Sources */,
 				757BE7E9192D4E880061CB20 /* BRSeedViewController.m in Sources */,
 				752E28E719234DA200DB5A3C /* NSData+Bitcoin.m in Sources */,
@@ -3834,6 +3863,7 @@
 				752E289A192349CE00DB5A3C /* BreadWallet.xcdatamodeld in Sources */,
 				759FBB37193290F600AB4465 /* BRSendViewController.m in Sources */,
 				752E28F119234E8100DB5A3C /* Reachability.m in Sources */,
+				9C23CDB319F5B9BC0087AF4C /* Countly_OpenUDID.m in Sources */,
 				75D5F3CE191EC270004AB296 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4198,6 +4228,17 @@
 			);
 			currentVersion = 752E2899192349CE00DB5A3C /* BreadWallet.xcdatamodel */;
 			path = BreadWallet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		9C23CDAF19F5B9BC0087AF4C /* Countly.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9C23CDB019F5B9BC0087AF4C /* Countly.xcdatamodel */,
+			);
+			currentVersion = 9C23CDB019F5B9BC0087AF4C /* Countly.xcdatamodel */;
+			name = Countly.xcdatamodeld;
+			path = "countly-sdk-ios-master/Countly.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

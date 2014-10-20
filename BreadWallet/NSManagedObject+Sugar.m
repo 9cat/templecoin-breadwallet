@@ -190,7 +190,14 @@ static NSUInteger _fetchBatchSize = 100;
     dispatch_once(&onceToken, ^{
         NSURL *docURL =
             [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].lastObject;
-        NSURL *modelURL = [NSBundle.mainBundle URLsForResourcesWithExtension:@"momd" subdirectory:nil].lastObject;
+       
+        
+     //   NSURL *modelURL = [NSBundle.mainBundle URLsForResourcesWithExtension:@"momd" subdirectory:nil].lastObject;
+        NSURL *modelURL = [NSBundle.mainBundle URLForResource:@"BreadWallet" withExtension:@"momd" ];
+        
+        
+        
+        
         NSString *projName = [[modelURL lastPathComponent] stringByDeletingPathExtension];
         NSURL *storeURL = [[docURL URLByAppendingPathComponent:projName] URLByAppendingPathExtension:@"sqlite"];
         NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];

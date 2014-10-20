@@ -25,7 +25,7 @@
 
 #import "BRAppDelegate.h"
 #import "BRPeerManager.h"
-
+#import "Countly.h"
 #if BITCOIN_TESTNET
 #warning testnet build
 #endif
@@ -34,6 +34,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+     [[Countly sharedInstance] start:@"bccc79b0ed2dd564d2ab7b7c27bed87d470c460c" withHost:@"http://mobilecount.bondni.com"];
+    
     // Override point for customization after application launch.
 
     // use background fetch to stay synced with the blockchain
